@@ -18,4 +18,3 @@ def madlib_questions():
 @app.route('/story')
 def write_story():
     template = story.generate(request.args)
-    return template
