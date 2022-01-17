@@ -17,4 +17,5 @@ def madlib_questions():
 
 @app.route('/story')
 def write_story():
-    template = story.generate(request.args)
+    text = story.generate(request.args)
+    return render_template('story.html', text=text)
